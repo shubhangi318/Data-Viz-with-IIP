@@ -1,4 +1,4 @@
-# Week 1:Custom emoji
+# Week 2:Custom emoji
 
 Challenge: Design and code in p5 a new emoji that does not exist in standard keyboards.
 
