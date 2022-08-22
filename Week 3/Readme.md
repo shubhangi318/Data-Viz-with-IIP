@@ -10,7 +10,7 @@ For the static assignment, I tried to visualize the profitability of directors w
 
 *******************
 
-![](Data-Viz-with-IIP/Week 3/Week3(motion gif).gif)
+![](https://github.com/shubhangi318/Data-Viz-with-IIP/blob/main/Week%203/Week3(motion%20gif).gif)
 
 For the motion assignment, I created a barchart gif that shows the profitability of 5 star kids vs outsiders.
 
