@@ -1,0 +1,85 @@
+var data, useData = []
+function easeOutQuart(x){
+return 1 - pow(1 - x, 4);
+}
+function preload() {
+	data = loadJSON("data.json");
+}
+function setup() {
+	data = Object.values(data);
+	createCanvas(600, 440);
+	background("#12A4D9");
+}
+function draw() {
+	let animationProgress = easeOutQuart(map(frameCount, 0, 300, 0, 1, true))
+    fill("white")
+  textFont('Helvetica');
+  textSize(15);
+   text("Ranking profitability ratio (Revenue over movie budget):", 120, 30)
+  text("Star kids", 10, 60)
+  text("Outsiders", 10, 250)
+  translate(0,70);
+	for(var i = 0; i <5; i++){
+      textSize(12);
+		translate(0,5);
+		push()
+			stroke(255);
+			fill(235, 131, 154, 255);
+			let d = data[i]
+            if(d.Gender == 'M'){
+              fill("#322E2F")
+            }
+      else{
+        fill("#E2D810")
+      }
+			rect(0, i*25, d.Profit*150*animationProgress, 25);
+			translate(0, 15);
+			noStroke();
+      if(d.Gender == 'M'){
+              fill("#E2D810")
+            }
+      else{
+        fill("#322E2F")
+      }
+			
+			text(d.Actor, 10, i*25)
+            let y = round(d.Profit, 2);
+			text(y,115, i*25)
+		pop()
+	}
+  translate(0,40);
+  for(var i = 5; i <10; i++){
+      textSize(12);
+		translate(0,5);
+		push()
+			stroke(255);
+			fill(235, 131, 154, 255);
+			let d = data[i]
+            if(d.Gender == 'M'){
+              fill("#322E2F")
+            }
+      else{
+        fill("#E2D810")
+      }
+			rect(0, i*25, d.Profit*150*animationProgress, 25);
+			translate(0, 15);
+			noStroke();
+      if(d.Gender == 'M'){
+              fill("#E2D810")
+            }
+      else{
+        fill("#322E2F")
+      }
+			
+			text(d.Actor, 10, i*25)
+            let y = round(d.Profit, 2);
+			text(y,115, i*25)
+		pop()
+	}
+  fill("#E2D810")
+  rect(480, 30, 10, 10)
+  text("Female", 500, 40)
+  fill("#322E2F")
+  rect(480, 50, 10, 10)
+  text("Male", 500, 60)
+}
