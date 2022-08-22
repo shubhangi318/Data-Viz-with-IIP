@@ -2,7 +2,7 @@
 
 Challenge: Using the bollywood dataset, create two p5js visualizations - one png and one gif showing an interesting insight about Bollywood.
 
-![](Week3(motion gif).mp4)
+![](week3(static).png)
 
 For the static assignment, I tried to visualize the profitability of directors when they cast Shah Rukh Khan in the lead role.
 
