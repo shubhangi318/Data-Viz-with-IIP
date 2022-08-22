@@ -1,1 +1,170 @@
-https://editor.p5js.org/shubhangi318/full/7gT1yPoA0
+var data, useData = []
+
+function preload() {
+	data = loadJSON("data.json");
+}
+function setup() {
+	data = Object.values(data);
+	createCanvas(550, 475);
+	background("#e2e2e2");
+  noLoop();
+}
+
+function draw() {
+  translate(20,80);
+	for(var i = 0; i <3; i++){
+		translate(90, 0);
+		push()
+			let d = data[i]
+            diameter = map(d.Profit, 0, 5, 0, 100)
+           if(d.Genre == "rom__com"){
+             fill("#f3ff82")
+           }
+      else if (d.Genre == "thriller"){
+        fill("#abeb88")
+      }
+      else if(d.Genre == "action"){
+        fill("#67d294")
+      }
+      else if(d.Genre == "drama"){
+        fill("#17b79c")
+      }
+      else if(d.Genre == "masala"){
+        fill("#009a9c")
+      }
+      else if(d.Genre == "love_story"){
+        fill("#1f4260")
+      }
+    ellipse(i*80, 0,  diameter, diameter);	
+      translate(-40, -50)
+      fill("black")
+      text(d.Director, i*80, 0)
+            let y = round(d.Profit, 1);
+      translate(35, -5)
+			text(y,i*80, 60)
+		pop()
+	}
+  translate(-508,100);
+  for(var j = 3; j <6; j++){
+    translate(90,0);
+		push()
+    let d = data[j]
+            diameter = map(d.Profit, 0, 5, 0, 100)
+         if(d.Genre == "rom__com"){
+             fill("#f3ff82")
+           }
+      else if (d.Genre == "thriller"){
+        fill("#abeb88")
+      }
+      else if(d.Genre == "action"){
+        fill("#67d294")
+      }
+      else if(d.Genre == "drama"){
+        fill("#17b79c")
+      }
+      else if(d.Genre == "masala"){
+        fill("#009a9c")
+      }
+      else if(d.Genre == "love_story"){
+        fill("#1f4260")
+      }
+    ellipse(j*80, 0,  diameter, diameter);	
+    translate(-40, -40)
+      fill("black")
+      text(d.Director, j*80, 0)
+            let y = round(d.Profit, 1);
+      translate(33, -15)
+			text(y,j*80, 60)
+		pop()
+	}
+  translate(-508,90);
+	for(var k = 6; k <9; k++){
+		translate(90, 0);
+		push()
+			let d = data[k]
+            diameter = map(d.Profit, 0, 5, 0, 100)
+          if(d.Genre == "rom__com"){
+             fill("#f3ff82")
+           }
+      else if (d.Genre == "thriller"){
+        fill("#abeb88")
+      }
+      else if(d.Genre == "action"){
+        fill("#67d294")
+      }
+      else if(d.Genre == "drama"){
+        fill("#17b79c")
+      }
+      else if(d.Genre == "masala"){
+        fill("#009a9c")
+      }
+      else if(d.Genre == "love_story"){
+        fill("#1f4260")
+      }
+    ellipse(k*80, 0,  diameter, diameter);	
+      translate(-40, -40)
+      fill("black")
+      text(d.Director, k*80, 0)
+            let y = round(d.Profit, 1);
+      translate(35, -5)
+			text(y,k*79.7, 50)
+		pop()
+	}
+  translate(-510,70);
+	for(var l = 9; l <data.length; l++){
+		translate(90, 0);
+		push()
+			let d = data[l]
+            diameter = map(d.Profit, 0, 5, 0, 100)
+        if(d.Genre == "rom__com"){
+             fill("#f3ff82")
+           }
+      else if (d.Genre == "thriller"){
+        fill("#abeb88")
+      }
+      else if(d.Genre == "action"){
+        fill("#67d294")
+      }
+      else if(d.Genre == "drama"){
+        fill("#17b79c")
+      }
+      else if(d.Genre == "masala"){
+        fill("#009a9c")
+      }
+      else if(d.Genre == "love_story"){
+        fill("#1f4260")
+      }
+    ellipse(l*80, 0,  diameter, diameter);	
+      translate(-40, -30)
+      fill("black")
+      text(d.Director, l*80, 0)
+            let y = round(d.Profit, 1);
+      translate(31, -5)
+			text(y,l*80, 40)
+		pop()
+	}
+  fill("#1f4260")
+  rect(580, 40, 10, 10)
+  text("Love Story", 595, 50)
+  fill("#009a9c")
+  rect(665, 40, 10, 10)
+  text("Masala", 680, 50)
+  fill("#17b79c")
+  rect(740, 40, 10, 10)
+  text("Drama", 755, 50)
+  fill("#67d294")
+  rect(810, 40, 10, 10)
+  text("Action", 825, 50)
+  fill("#abeb88")
+  rect(870, 40, 10, 10)
+  fill("#57ad28")
+  text("Thriller", 885, 50)
+  fill("#f3ff82")
+  rect(930, 40, 10, 10)
+  fill("#bed10f")
+  text("Rom Com", 945, 50)
+  fill("black")
+  textFont('Helvetica');
+  textSize(15);
+  text("Ranking profitability(Revenue on Budget) of directors casting SRK in lead role", 535, 100)
+}
