@@ -10,7 +10,7 @@ For the static assignment, I tried to visualize the profitability of directors w
 
 ###########
 
-![](Week3(motion gif).mp4)
+![](Week3(motion gif).gif)
 
 For the motion assignment, I created a barchart gif that shows the profitability of 5 star kids vs outsiders.
 
