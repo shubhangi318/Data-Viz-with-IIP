@@ -6,7 +6,7 @@ Challenge: You have made an alien friend from Mars. They are curious about your 
 I made a data portrait highlighting a few things about me along with a key for reading it.
 
 Data Portrait: <br />
-![](Data Portrait.png)
+![](Data Portrait.jpg)
 
 Key: <br />
-![](Key.png)
+![](Key.jpg)
