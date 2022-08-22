@@ -8,7 +8,7 @@ For the static assignment, I tried to visualize the profitability of directors w
 
 [Code in p5.js](https://editor.p5js.org/shubhangi318/full/7gT1yPoA0)
 
-###########
+*******************
 
 ![](Week3(motion gif).gif)
 
