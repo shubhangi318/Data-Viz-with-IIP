@@ -1,0 +1,114 @@
+function setup() {
+  createCanvas(220, 320);
+}
+
+function draw() {
+  background(255, 255, 255);
+  
+  strokeWeight(4);
+  //face structure
+  fill(255, 216, 117);
+  quad(72, 160, 156, 160, 144, 288, 84, 288);
+  
+  //hair
+  fill(255, 204, 0);
+  //hair curve 1     
+  stroke(0);    
+  beginShape();
+  curveVertex(88, 160);
+  curveVertex(88, 160);
+  curveVertex(60, 44);
+  curveVertex(40, 56);
+  curveVertex(36, 64);
+  curveVertex(40, 80);
+  curveVertex(72, 160);
+  curveVertex(72, 160);
+  endShape();
+  
+  //hair curve 2
+  stroke(0);
+  beginShape();
+  curveVertex(104,160);
+  curveVertex(104,160);
+  curveVertex(100, 20);
+  curveVertex(80, 8);
+  curveVertex(64, 24);
+  curveVertex(60, 44);
+  curveVertex(88, 160);
+  curveVertex(88, 160);
+  endShape();
+
+  //hair curve 3
+  stroke(0);
+  beginShape();
+  curveVertex(120, 160);
+  curveVertex(120, 160);
+  curveVertex(128, 40);
+  curveVertex(100, 20);
+  curveVertex(96, 40);
+  curveVertex(96, 120);
+  curveVertex(104, 160);
+  curveVertex(104, 160);
+  endShape();
+
+  
+  //hair curve 4
+  stroke(0);
+  beginShape();
+  curveVertex(164, 104);
+  curveVertex(164, 104);
+  curveVertex(156, 76);
+  curveVertex(128, 40);
+  curveVertex(120, 80);
+  curveVertex(120, 160);
+  curveVertex(120, 160);
+  endShape();
+
+  //hair curve 5
+  stroke(0);
+  beginShape();
+  curveVertex(136, 160);
+  curveVertex(136, 160);
+  curveVertex(164, 104);
+  curveVertex(156, 76);
+  curveVertex(120, 160);
+  curveVertex(120, 160);
+  endShape();
+
+  //hair curve 6
+  stroke(0);
+  beginShape();
+  curveVertex(156, 160);
+  curveVertex(156, 160);
+  curveVertex(176, 128);
+  curveVertex(164, 104);
+  curveVertex(136, 160);
+  curveVertex(136, 160);
+  endShape();
+
+  //side hair
+  triangle(156, 160, 172, 160, 152, 200)
+  triangle(72, 160, 56, 160, 76, 200)
+  
+  //ears
+  strokeWeight(2);
+  fill(255, 216, 117);
+  arc(76, 205, 25, 15, PI / 2, 3 * PI / 2, OPEN); 
+  arc(152, 205, 25, 15, 3 * PI / 2, PI / 2, OPEN); 
+  
+  //mouth
+  fill(255);
+  arc(120, 250, 40, 40, -PI / 6, PI / 6, PIE);
+  
+  //sunglasses
+  fill(0);
+  arc(92, 200, 32, 40, 0, -PI, CHORD);
+  arc(136, 200, 32, 40, 0, -PI, CHORD); 
+  bezier(104, 200, 94, 195, 134, 195, 124, 200);
+  
+  //nose
+  line(114, 210, 114, 225)
+  line(105, 225, 114, 233)
+  line(114, 233, 121, 225)
+  
+}
