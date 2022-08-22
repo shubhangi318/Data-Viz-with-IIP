@@ -5,6 +5,7 @@ Challenge: You have made an alien friend from Mars. They are curious about your 
 <br />
 I made a data portrait highlighting a few things about me along with a key for reading it.
 
+
 Data Portrait: <br />
 ![](Data Portrait.jpg)
 
