@@ -1,1 +1,114 @@
-https://editor.p5js.org/shubhangi318/full/hOv_ejURE
+let pml = [];
+let Mum, Del, Kol, Hyd;
+ 
+ function preload(){
+Mum=loadJSON("https://api.openweathermap.org/data/2.5/air_pollution?lat=19.07&lon=72.87&appid=208cf476398e863eee94e8ae82eac5a8");
+Del=loadJSON("https://api.openweathermap.org/data/2.5/air_pollution?lat=28.7&lon=77.1&appid=208cf476398e863eee94e8ae82eac5a8");
+Kol=loadJSON("https://api.openweathermap.org/data/2.5/air_pollution?lat=22.57&lon=88.36&appid=208cf476398e863eee94e8ae82eac5a8");
+Hyd=loadJSON("https://api.openweathermap.org/data/2.5/air_pollution?lat=17.38&lon=78.48&appid=208cf476398e863eee94e8ae82eac5a8");
+ }
+
+const margin = 50;
+
+function setup() {
+   createCanvas(500, 475);
+  let citylist = [Mum, Del, Kol, Hyd];
+   for(let i=0; i<citylist.length; i++){
+      pml[i] = citylist[i].list[0].components.pm2_5
+     print(pml[i])
+   }
+  noLoop();
+ }
+ 
+ function draw() {
+   background("#efede7");
+   noStroke()
+   fill("#851111")
+   textFont('Helvetica');
+  textSize(18);
+   text("How well are your lungs breathing?", 110, 30)
+   let desc = "Darker a lung, more is - the PM2.5 concentration - in the city's air.";
+let splitString = split(desc, '-');
+   textSize(13);
+text(splitString[0], 183, 250);
+text(splitString[1], 180, 265);
+text(splitString[2], 180, 280);
+   for (i = 0; i < 10; i++) {
+    lungcol = map(i, 0, 9, 0, 1);
+    strokeWeight(0);
+    colstrip = lerpColor(color("#be0000"), color("#290809"), lungcol);
+    fill(colstrip);
+    rect((i*10)+180 , 290, 60, 20);
+  }
+   translate(23, 40)
+   fill("#851111")
+   text("Mumbai", 60, 35)
+   text("Delhi", 350, 35)
+   text("Kolkata", 65, 270)
+   text("Hyderabad", 340, 270)
+   for(let k=0; k<2; k++){
+     strokeWeight(30);
+     strokeJoin(ROUND);
+     if(pml[k]<20){
+       fill("#be0000")
+       stroke("#be0000");
+     }
+     else if(pml[k]<40){
+       fill("#860000")
+       stroke("#860000");
+     }
+     else if(pml[k]<60){
+       fill("#550609")
+       stroke("#550609");
+     }
+     else if(pml[k]<80){
+       fill("#3a0c0d")
+       stroke("#3a0c0d");
+     }
+     else{
+       fill("#1a0405")
+       stroke("#1a0405");
+     }
+     triangle(60,80,10,160,60,150);
+     triangle(110,80,160,160,110,150);
+     strokeWeight(2);
+     line(80, 50, 80, 115);
+     line(60, 115, 80, 115);
+     line(90, 50, 90, 115);
+     line(90, 115, 100, 115);
+     translate(280, 0)
+   }
+   translate(-560,240)
+   for(let k=2; k<4; k++){
+     strokeWeight(30);
+     strokeJoin(ROUND);
+     if(pml[k]<20){
+       fill("#be0000")
+       stroke("#be0000");
+     }
+     else if(pml[k]<40){
+       fill("#860000")
+       stroke("#860000");
+     }
+     else if(pml[k]<60){
+       fill("#550609")
+       stroke("#550609");
+     }
+     else if(pml[k]<80){
+       fill("#3a0c0d")
+       stroke("#3a0c0d");
+     }
+     else{
+       fill("#1a0405")
+       stroke("#1a0405");
+     }
+     triangle(60,80,10,160,60,150);
+     triangle(110,80,160,160,110,150);
+     strokeWeight(2);
+     line(80, 50, 80, 115);
+     line(60, 115, 80, 115);
+     line(90, 50, 90, 115);
+     line(90, 115, 100, 115);
+     translate(280, 0)
+   }
+ }
