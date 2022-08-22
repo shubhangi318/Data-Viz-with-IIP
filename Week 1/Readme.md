@@ -7,7 +7,7 @@ I made a data portrait highlighting a few things about me along with a key for r
 
 
 Data Portrait: <br />
-![](Data Portrait.jpg)
+![](DataPortrait.jpg)
 
 Key: <br />
 ![](Key.jpg)
