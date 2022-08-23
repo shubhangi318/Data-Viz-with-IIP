@@ -13,7 +13,9 @@ Data Portrait: <br />
 Key: <br />
 ![](Key.jpg)
 
-## Week 2:Custom emoji
+*******************
+
+## Week 2: Custom emoji
 
 Challenge: Design and code in p5 a new emoji that does not exist in standard keyboards.
 
@@ -27,7 +29,27 @@ These two things resonate with me a lot :p
 
 [Code in p5.js](https://editor.p5js.org/shubhangi318/full/4pYg4ODQN)
 
-Week 3: Static and motion graphs from bollywood dataset containing information like actor, director, music director, rating etc. for roughly 200 movies <br />
+*******************
+
+## Week 3: Bollywood story
+
+Challenge: Using the bollywood dataset, create two p5js visualizations - one png and one gif showing an interesting insight about Bollywood.
+
+![](week3(static).png)
+
+For the static assignment, I tried to visualize the profitability of directors when they cast Shah Rukh Khan in the lead role.
+
+[Code in p5.js](https://editor.p5js.org/shubhangi318/full/7gT1yPoA0)
+
+*******************
+
+![](https://github.com/shubhangi318/Data-Viz-with-IIP/blob/main/Week%203/Week3(motion%20gif).gif)
+
+For the motion assignment, I created a barchart gif that shows the profitability of 5 star kids vs outsiders.
+
+[Code in p5.js](https://editor.p5js.org/shubhangi318/full/d4PIQj_ed)
+
+*******************
 
 Week 4: Graph depicting city's current weather using live API <br />
 
