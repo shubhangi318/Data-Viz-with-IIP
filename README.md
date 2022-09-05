@@ -73,5 +73,5 @@ This snap is taken on 22 August 2022, at 14:34 IST. The lungs change color depen
 
 Challenge: Pick an artwork from any artist that you like. Write a one page write-up on the different design principles you see in the artwork.
 
-Opwn week 5 to find the presentation.
+Open week 5 to find the presentation.
 
